@@ -1,8 +1,8 @@
 # Press_Key_Elf
 
 #### Description
-Python加强版按键精灵。基于magical_funcs里的函数，可以自己搭建一些好玩的东西。
 Help with boring clicks.
+With the help of magical_funcs.py, build your own click/press sequence. 
 
 #### Software Architecture
 Software architecture description
