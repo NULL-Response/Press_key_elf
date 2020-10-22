@@ -16,7 +16,7 @@ mode = 'test'
 
 # 模式图的存储路径
 # The save path of pattern pics
-pattern_path = 'C:\\Users\\tadio\\Desktop\\helper\\pics\\patterns\\'
+pattern_path = 'yourpath'
 
 # 设置logging的书写格式
 # Setting logging configs
@@ -24,7 +24,7 @@ logging.basicConfig(
     level=logging.DEBUG,
     format=
     '%(lineno)d : %(asctime)s : %(levelname)s : %(funcName)s : %(message)s',
-    filename='C:\\Users\\tadio\\Desktop\\helper\\logs\\log{}.txt'.format(
+    filename='yourpath\\log{}.txt'.format(
         time.strftime('-%Y-%m-%d')),
     filemode='w')
 
@@ -471,7 +471,7 @@ def ClientRect_PrtSc(hwnd, area=None, filename=''):
     try:
         hwnd = hwnd
         if filename == '':
-            filename = 'C:\\Users\\tadio\\Desktop\\helper\\pics\\targets\\{}.bmp'.format(
+            filename = 'yourpath\\{}.bmp'.format(
                 hwnd)
         hwndDC = win32gui.GetDC(
             hwnd)  # 获取窗口的设备上下文Device Context。GetWindowDC包括了非客户区，而GetDC仅为客户区
@@ -577,7 +577,7 @@ def Find_Pic(hwnd,
         hwnd = hwnd
         ClientRect_PrtSc(hwnd, find_pattern_in_area, filename)
         if filename == '':  # 没有提供文件名则需要改成默认文件名
-            filename = 'C:\\Users\\tadio\\Desktop\\helper\\pics\\targets\\{}.bmp'.format(
+            filename = 'yourpath\\{}.bmp'.format(
                 hwnd)
         pat = cv.imread(pattern)  # pattern
         src = cv.imread(filename)  # source
@@ -656,7 +656,7 @@ def print_hitted_points(hitted_points, hwnd, deltas):
         print('deltas = {}, '.format(deltas))
         print('hitted_points = ({},{})  ({},{})'.format(x1, y1, x2, y2))
         # 这样就得到了应该标注的坐标
-        filename = 'C:\\Users\\tadio\\Desktop\\helper\\pics\\targets\\{}.bmp'.format(
+        filename = 'yourpath\\{}.bmp'.format(
             hwnd)
         src = cv.imread(filename)
         if x2 < 0 and y2 < 0:
